@@ -1,0 +1,22 @@
+{
+    "name": "Lively Desktop Capture",
+    "version": "1",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://lively-web.org/*"],
+            "js": ["livelyInjection.js"]
+        }
+    ],
+    "page_action": {
+        "default_title": "Lively desktop capture"
+    },
+    "permissions": [
+        "desktopCapture",
+        "activeTab",
+        "tabs"
+    ]
+}
